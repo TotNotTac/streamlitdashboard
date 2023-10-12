@@ -17,7 +17,6 @@ st.markdown("""
     tested in the following subjects: mathmatics, reading, and writing.
 """)
 
-
 data_load_state = st.text('Loading data...')
 df = lib.load_data()
 data_load_state.text('')
