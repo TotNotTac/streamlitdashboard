@@ -6,3 +6,4 @@ streamlit
 folium
 openpyxl
 streamlit_folium
+scipy
