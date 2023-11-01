@@ -16,13 +16,14 @@ from describedataplot import *
 from mapplot import *
 from chargingtransactions import *
 from otherplots import *
+from auto import auto_plot
 
 st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 selectedPlot = st.sidebar.selectbox(
     "Select plot",
-    ("Charging stations", "Describe data", "Map plot", "Transactions"),
+    ("Charging stations", "Describe data", "Map plot", "Transactions", "Auto"),
 )
 
 match selectedPlot:
@@ -34,3 +35,5 @@ match selectedPlot:
         chargingtransactionsplot()
     case "Transactions":
         otherplots()
+    case "Auto":
+        auto_plot()
