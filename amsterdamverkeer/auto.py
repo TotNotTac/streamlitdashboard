@@ -54,7 +54,13 @@ def auto_plot():
     col1, col2 = st.columns([1, 2])
     with col1:
         st.markdown("""
-                De gemiddelde prijs voor een EV auto is €53.519,64
+                ### Titel
+
+                De gemiddelde prijs voor een EV auto is €53.519,64.
+                    
+                Ongeveer 5,7% van alle auto's zijn een Audi, de gemiddelde prijs voor een Audi EV is €79.783,53.
+
+                Ongeveer 4,7% van alle auto's zijn een Renault, de gemiddelde prijs voor Renault EV is €34.668,84.
                     """)
     with col2:
         geselecteerde_merken = ['TESLA', 'VOLKSWAGEN', 'KIA', 'HYUNDAI',
