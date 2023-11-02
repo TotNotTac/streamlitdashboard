@@ -23,7 +23,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 selectedPlot = st.sidebar.selectbox(
     "Select plot",
-    ("Charging stations", "Describe data", "Map plot", "Transactions", "Auto"),
+    ("Merken", "Describe data", "Charging stations", "Map plot", "Transactions"),
 )
 
 match selectedPlot:
@@ -35,5 +35,5 @@ match selectedPlot:
         chargingtransactionsplot()
     case "Transactions":
         otherplots()
-    case "Auto":
+    case "Merken":
         auto_plot()

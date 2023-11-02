@@ -54,7 +54,7 @@ def auto_plot():
     col1, col2 = st.columns([1, 2])
     with col1:
         st.markdown("""
-                ### Titel
+                ### Prijs per merk
 
                 De gemiddelde prijs voor een EV auto is €53.519,64.
                     
