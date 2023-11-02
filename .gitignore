@@ -1,1 +1,7 @@
 __pycache__/
+.venv
+.vscode
+/elektrischeautos/Elektrische_voertuigen_20231030.csv
+/elektrischeautos/laadpalen_small.json
+/elektrischeautos/laadpalen.json
+/elektrischeautos/laadpaaldata.csv
