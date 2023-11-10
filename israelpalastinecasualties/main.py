@@ -1,14 +1,16 @@
 
 import streamlit as st
 from exploration import *
+from jan import jan
+from jan2 import jan2
 from mapplot import mapPlot
 
 st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 selectedPlot = st.sidebar.selectbox(
-    "Select Page",
-    ("Home", "Data exploration", "Map"),
+    "Select plot",
+    ("Home", "Data exploration", "jan", "jan2", "Map"),
 )
 
 match selectedPlot:
@@ -19,5 +21,7 @@ match selectedPlot:
         """)
     case "Data exploration":
         exploration_plot()
-    case "Map":
-        mapPlot()
+    case "jan":
+        jan()
+    case "jan2":
+        jan2()
