@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-def jan2():
+def Forces():
     df = load_data()
 
 #cirkeldiagrammen man/vrouw

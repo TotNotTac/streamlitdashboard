@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-def jan():
+def Deaths():
     df = load_data()
 
     palestinian_data = df[df['citizenship'] == 'Palestinian']
