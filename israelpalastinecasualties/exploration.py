@@ -52,6 +52,15 @@ def exploration_plot():
         with col1:
             st.markdown("""
             ### Correlation matrix for different variables in the dataset
+            There are some clear correlations between certain columns. For example there's a 
+            notable correlation between the citizenship of the vicitim, and who 
+            they were killed by. Unsurprisingly there's also a correlation between
+            the citizenship and the place of ressidence.
+
+            Maybe more surprising is that there is a visible correlation between 
+            the citizenship of the vicitim and the ammunition they were killed with.
+            This means that there is a difference in the use of ammunition between
+            different parties in the conflict.
             """)
         with col2:
             removeDates = st.checkbox("Remove dates", value=True)
@@ -66,14 +75,15 @@ def exploration_plot():
 
         df = load_data()
         regions = df['event_location_region'].unique().tolist()
-        region_filter = st.multiselect(
-            "Filter by region", regions, regions)
-        if region_filter != "No filter":
-            df = df[df['event_location_region'].isin(region_filter)]
 
     with tabs[2]:
         df = load_data()
-        df = date_filter(df)
+        df = date_filter(df, key="klfjaskldfj")
+
+        region_filter = st.multiselect(
+            "Filter by region", regions, regions, key="dafsdkfjklasdjf")
+        if region_filter != "No filter":
+            df = df[df['event_location_region'].isin(region_filter)]
 
         col1, col2 = st.columns(2)
         with col1:
@@ -93,6 +103,14 @@ def exploration_plot():
     # st.plotly_chart(fig)
 
     with tabs[3]:
+        df = load_data()
+        df = date_filter(df, key="bla")
+
+        region_filter = st.multiselect(
+            "Filter by region", regions, regions, key="fsdfujasdjfuiweurfjaisjdf")
+        if region_filter != "No filter":
+            df = df[df['event_location_region'].isin(region_filter)]
+
         col1, col2 = st.columns(2)
         with col1:
             sns.countplot(df, x="type_of_injury",

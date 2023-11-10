@@ -25,3 +25,5 @@ match selectedPlot:
         jan()
     case "jan2":
         jan2()
+    case "Map":
+        mapPlot()
