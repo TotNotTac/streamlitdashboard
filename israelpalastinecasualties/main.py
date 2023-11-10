@@ -15,7 +15,7 @@ match selectedPlot:
     case "Home":
         st.markdown("""
         ## Fatalities in the Israeli-Palestinian conflict
-
+        
         """)
     case "Data exploration":
         exploration_plot()
