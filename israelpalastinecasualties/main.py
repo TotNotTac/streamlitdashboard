@@ -1,8 +1,8 @@
 
 import streamlit as st
 from exploration import *
-from jan import jan
-from jan2 import jan2
+from Deaths import Deaths
+from Forces import Forces
 from mapplot import mapPlot
 
 st.set_page_config(layout="wide")
@@ -21,7 +21,7 @@ match selectedPlot:
         """)
     case "Data exploration":
         exploration_plot()
-    case "jan":
-        jan()
+    case "Deaths":
+        Deaths()
     case "jan2":
-        jan2()
+        Forces()
